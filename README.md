@@ -1,16 +1,39 @@
-# React + Vite
+# 🎬 MovieSearch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React.js Movie Explorer App** built using the [OMDb API](https://www.omdbapi.com/).  
+Search any movie, view posters, see release years, and explore detailed movie information — all in one elegant dark-themed UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🔍 **Search Movies:** Instantly search movies by title.  
+- 🎞️ **Movie Cards:** Displays movie posters, titles, and release years.  
+- ⏳ **Loading State:** Beautiful loader while fetching data.  
+- ⚠️ **Error Handling:** Shows message if no results found.  
+- 🧭 **React Routing Ready:** Setup for multiple pages (Home + Movie Detail).  
+- 🎨 **Dark UI:** Clean and responsive movie explorer layout.  
+- 🧠 **Easy to Extend:** Add features like favorites, pagination, or dark/light mode easily.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category | Technologies |
+|-----------|--------------|
+| Frontend | React.js |
+| Routing | React Router DOM |
+| API Calls | Axios |
+| Styling | CSS / Tailwind CSS |
+| Data Source | OMDb API |
+
+---
+
+## ⚙️ Setup Instructions
+
+Follow these steps to run the project locally:
+
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/om-dev007/MovieSearch.git
+   cd MovieSearch
