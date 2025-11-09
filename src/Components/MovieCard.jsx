@@ -1,8 +1,6 @@
 import React from 'react'
 
 const MovieCard = (props) => {
-
-  console.log(props.value);
   return (
     <div className='w-50 my-4 mx-2'>
       <div className='flex flex-wrap rounded-2xl overflow-hidden object-contain'>
