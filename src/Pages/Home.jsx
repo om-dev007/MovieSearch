@@ -12,19 +12,16 @@ const Home = (props) => {
 
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState('')
-  const [hasSearched, setHasSearched] = useState(false)
 
   useEffect(() => {
     const controller = new AbortController()
     const run = async () => {
       if (!InputVal || InputVal.trim() === '') {
-        setHasSearched(false)
         setMessage('Search movies to explore 🎬')
         props.onChangeData && props.onChangeData([])  
         return
       }
 
-      setHasSearched(true)
       setIsLoading(true)
       try {
         const response = await axios.get(
