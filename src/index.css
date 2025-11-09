@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+input {
+    border: solid 2px #a19d9d;
+    border-radius: 0.5em;
+}
+
+body {
+    background-color: #4a5565;
+}
+
+input:focus {
+    border: rgb(189, 186, 186) 2px solid;
+    outline: none;
+}
