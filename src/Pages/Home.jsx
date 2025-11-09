@@ -19,7 +19,7 @@ const Home = (props) => {
     const run = async () => {
       if (!InputVal || InputVal.trim() === '') {
         setHasSearched(false)
-        setMessage('Search your favorite movies')
+        setMessage('Search movies to explore 🎬')
         props.onChangeData && props.onChangeData([])  
         return
       }
@@ -74,7 +74,7 @@ const Home = (props) => {
 
   const emptyUi = (
     <div className='py-10 text-center'>
-      <p>{message || 'Search your favorite movies'}</p>
+      <p>{message || 'Search movies to explore 🎬'}</p>
     </div>
   )
 
