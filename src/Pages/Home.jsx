@@ -45,7 +45,7 @@ const Home = (props) => {
         <>
           <div className=' px-5 py-3'>
             <h2 className=' text-center font-semibold  text-2xl '>
-              <span>{TotalMovies } </span> Movies Found
+              <span>{TotalMovies }  </span>   Movies Found
             </h2>
           </div>
           <div className=' px-5 py-3 flex justify-center  flex-wrap gap-5'>
