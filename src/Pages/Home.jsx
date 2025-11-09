@@ -58,10 +58,8 @@ const Home = (props) => {
 
   const resultsUi = (
     <>
-      <div className='px-5 py-3'>
-        <h2 className='text-center font-semibold text-2xl'>
-          <span>{TotalMovies}</span> Movies Found
-        </h2>
+      <div>
+        <h1 className='font-semibold text-3xl text-wrap text-center'>Movies List</h1>
       </div>
 
       <div className='px-5 py-3 flex justify-center flex-wrap gap-5'>
@@ -74,17 +72,33 @@ const Home = (props) => {
 
   const emptyUi = (
     <div className='py-10 text-center'>
-      <p>{message || 'Search movies to explore 🎬'}</p>
+      <p className='text-3xl font-semibold text-wrap'>{message || 'Search movies to explore 🎬'}</p>
     </div>
+  )
+
+  const movieListui = (
+    <div className='px-5 py-3'>
+        <h2 className='text-center font-semibold text-2xl'>
+          <span>{TotalMovies}</span> Movies Found
+        </h2>
+      </div>
   )
 
   return (
     <div className='bg-gray-600 min-h-screen text-white'>
       <Navbar />
       <SearchBar value={props.value} onChange={props.onChangeInput} />
-      <h1 className='font-semibold text-2xl text-center'>Movie List</h1>
       {
-        isLoading ? loadingUi : (MoviesData.length > 0 ? resultsUi : (hasSearched ? emptyUi : emptyUi))
+        isLoading
+          ? loadingUi
+          : MoviesData.length > 0
+            ? (
+              <>
+                {movieListui}
+                {resultsUi}
+              </>
+            )
+            : emptyUi
       }
     </div>
   )
