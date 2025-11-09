@@ -28,7 +28,7 @@ const Home = (props) => {
       setIsLoading(true)
       try {
         const response = await axios.get(
-          `http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(InputVal)}`,
+          `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(InputVal)}`,
           { signal: controller.signal }
         )
         const results = response.data?.Search || []
