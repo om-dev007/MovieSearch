@@ -48,8 +48,8 @@ const Home = (props) => {
               <span>{TotalMovies }  </span>   Movies Found
             </h2>
           </div>
-          <div className=' px-5 py-3 flex justify-center  flex-wrap gap-5'>
 
+          <div className=' px-5 py-3 flex justify-center  flex-wrap gap-5'>
             {MoviesData.map((elem, idx) => {
               return <>
                 <MovieCard key={idx} value={elem} />
