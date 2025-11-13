@@ -4,7 +4,6 @@ import axios from 'axios'
 
 const isIncomplete = (m) => {
   if (!m) return true
-  // minimal search result from OMDB doesn't include Plot, Director, imdbRating etc.
   return !m.Plot || m.Plot === 'N/A' || !m.Director || !m.imdbRating
 }
 
@@ -20,11 +19,9 @@ const MovieDetail = () => {
   const apiKey = '272e4749'
 
   useEffect(() => {
-    // debug
 
     if (!id) return
 
-    // if we already have full data, skip fetching
     if (!isIncomplete(movie)) {
       setLoading(false)
       return
