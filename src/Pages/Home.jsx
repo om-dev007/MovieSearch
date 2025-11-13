@@ -60,11 +60,9 @@ const Home = (props) => {
       </div>
 
       <div className='px-5 py-3 flex justify-center flex-wrap gap-5'>
-        <a href=''>
-          {MoviesData.map((elem, idx) => (
+        {MoviesData.map((elem, idx) => (
           <MovieCard key={elem.imdbID || idx} value={elem} />
         ))}
-        </a>
       </div>
     </>
   )
