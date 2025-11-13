@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
@@ -38,12 +38,12 @@ const MovieDetail = () => {
         const res = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${encodeURIComponent(id)}&plot=full`)
         if (cancelled) return
         if (res.data && res.data.Response !== 'False') {
-          // merge existing minimal data with full response
           setMovie(prev => ({ ...(prev || {}), ...res.data }))
         } else {
           setError('Details not found')
         }
       } catch (err) {
+        console.error(err)
         if (!cancelled) setError('Error fetching details')
       } finally {
         if (!cancelled) setLoading(false)
