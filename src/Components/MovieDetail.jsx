@@ -58,7 +58,7 @@ const MovieDetail = () => {
   if (!movie) return <div className='p-6'>No movie selected</div>
 
   return (
-    <div className='min-h-screen flex justify-center items-center px-10 py-10'>
+    <div className='flex justify-center items-center px-10 py-10'>
       <div className='bg-white text-black p-5 max-w-3xl mx-auto'>
         <div className='flex gap-6'>
           <img src={movie.Poster} alt={movie.Title} className='w-48' />
