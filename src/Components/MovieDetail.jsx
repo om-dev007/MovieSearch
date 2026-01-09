@@ -60,7 +60,7 @@ const MovieDetail = () => {
   return (
     <div className='flex justify-center items-center px-10 py-10'>
       <div className='bg-white text-black p-5 max-w-3xl mx-auto'>
-        <div className='flex gap-6'>
+        <div className='flex-col flex sm:flex-row md:flex-row lg:flex-row gap-6'>
           <img src={movie.Poster} alt={movie.Title} className='w-48' />
           <div>
             <h1 className='text-2xl font-bold'>{movie.Title} ({movie.Year})</h1>
