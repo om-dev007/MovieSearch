@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
@@ -49,23 +49,27 @@ const MovieDetail = () => {
 
     fetchDetail()
     return () => { cancelled = true }
-  }, [id]) // run when id changes
+  }, [id])
 
-  if (loading) return <div className='p-6'>Loading...</div>
+  if (loading) return <div className='flex justify-center items-center h-48'>
+    <div className='w-12 h-12 border-4 border-gray-300 border-t-gray-700 rounded-full animate-spin'></div>
+  </div>
   if (error) return <div className='p-6 text-red-400'>{error}</div>
   if (!movie) return <div className='p-6'>No movie selected</div>
 
   return (
-    <div className='bg-white text-black p-5 max-w-3xl mx-auto'>
-      <div className='flex gap-6'>
-        <img src={movie.Poster} alt={movie.Title} className='w-48' />
-        <div>
-          <h1 className='text-2xl font-bold'>{movie.Title} ({movie.Year})</h1>
-          <p className='text-sm text-gray-700 mt-2'>{movie.Plot}</p>
-          <p className='mt-3'><strong>Genre:</strong> {movie.Genre}</p>
-          <p><strong>Director:</strong> {movie.Director}</p>
-          <p><strong>Actors:</strong> {movie.Actors}</p>
-          <p><strong>IMDB Rating:</strong> {movie.imdbRating}</p>
+    <div className='min-h-screen flex justify-center items-center px-10 py-10'>
+      <div className='bg-white text-black p-5 max-w-3xl mx-auto'>
+        <div className='flex gap-6'>
+          <img src={movie.Poster} alt={movie.Title} className='w-48' />
+          <div>
+            <h1 className='text-2xl font-bold'>{movie.Title} ({movie.Year})</h1>
+            <p className='text-sm text-gray-700 mt-2'>{movie.Plot}</p>
+            <p className='mt-3'><strong>Genre:</strong> {movie.Genre}</p>
+            <p><strong>Director:</strong> {movie.Director}</p>
+            <p><strong>Actors:</strong> {movie.Actors}</p>
+            <p><strong>IMDB Rating:</strong> {movie.imdbRating}</p>
+          </div>
         </div>
       </div>
     </div>
